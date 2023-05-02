@@ -1,0 +1,28 @@
+#自動帶入當月月份
+import math  #無條件進位
+import datetime
+import calendar
+
+
+#當月月份與天數
+today = datetime.date.today()
+m = today.month
+date = calendar.mdays[m]
+
+d = 0
+d = 8000 / date
+d1 = math.ceil(d)  #四捨五入
+sum = 0
+sum = d1 * date
+
+print(f'本月是{m:d}月，共{date}天：')
+
+n = 0
+while (d1 * n < 8000):
+  n += 1
+  if (n <= date):
+    print (f'{m:d}/{n:}，{d1 * n}')
+  else:
+    break
+
+print(f'所以每日要打 {d1:d} LIVE P，總共會有 {sum:d} 個 LIVE P')
