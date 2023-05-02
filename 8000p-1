@@ -1,0 +1,32 @@
+import math  #無條件進位
+
+date = input()
+#首項 = 0
+date = int(date) #公差
+
+'''
+d = 0
+d = int(d)
+
+end = 0
+#sum = (a+end) * n / 2
+
+while (((0+end) * date / 2) >= 8000):
+  end += d
+  date += 1
+end -= d
+date -= 1
+
+sum = int((0+end) * date / 2)
+print(sum, date, d)'''
+
+d = 0
+d = 8000 / date
+d1 = math.ceil(d)
+sum = 0
+sum = d1 * date
+
+
+
+
+print(f'這個月總共有{date:d}天，所以每日要打{d1:d}LIVE P，總共會有{sum:d}個 LIVE P')
